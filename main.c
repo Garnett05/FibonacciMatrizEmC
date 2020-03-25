@@ -59,6 +59,9 @@ int main(void) {
        printf("%i ", mat[j][i]);
     }
   }
+  //A primeira matriz exibe os números da sequência fibonacci em ordem linear.
+  //A segunda matriz exibe da mesma maneira que a primeira, porém os elementos são multiplicados por -1".
+  //A última matriz 'troca' as linhas pelas colunas, gerando assim uma nova matriz.
 
   return 0;
 }
