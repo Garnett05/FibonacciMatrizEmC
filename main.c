@@ -23,20 +23,38 @@ int main(void) {
   while (aux*aux < i){
     aux++;
   }
-  int mat [aux][aux];
 
+  int mat [aux][aux];
+  
   int n = 0;
-  for (int i = 0; i< aux; i++){
+  for (int i = 0; i < aux; i++){    
     for (int j = 0; j < aux; j++){
-      mat[i][j] = fibo[n];
+      if (fibo[n] != 0){
+        mat[i][j] = fibo[n];
+      }
+      else{
+        mat[i][j] = 0;
+      }
       n++;
     }
   }
-  for (int i = 0; i< aux; i++){
-    for (int j = 0; j < aux; j++){
-      printf("%d", mat[i,j]);
+     
+  printf("%i \n", aux);
+  printf("%i ", mat[0][0]);
+  printf("%i ", mat[0][1]);
+  printf("%i", mat[0][2]);
+  printf("\n%i ", mat[1][0]);
+  printf("%i ", mat[1][1]);
+  printf("%i ", mat[1][2]);
+  printf("\n%i ", mat[2][0]);
+  printf("%i ", mat[2][1]);
+  printf("%i", mat[2][2]);
+   
+  /*for (int i = 0; i < aux; i++){
+      printf("\n");
+      for (int j = 0; j < aux; j++){
+       printf("%i ", mat[i][j]);
     }
-  }
-
+  }*/
   return 0;
 }
