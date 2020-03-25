@@ -38,11 +38,20 @@ int main(void) {
       n++;
     }
   }   
+  printf("Matriz no formato normal:");
   for (int i = 0; i < aux; i++){
       printf("\n");
       for (int j = 0; j < aux; j++){
        printf("%i ", mat[i][j]);
     }
   }
+  printf("\n\nMatriz no formato oposto:");
+  for (int i = 0; i < aux; i++){
+      printf("\n");
+      for (int j = 0; j < aux; j++){
+       printf("%i ", mat[i][j] * -1);
+    }
+  }
+
   return 0;
 }
