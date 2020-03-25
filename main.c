@@ -52,6 +52,13 @@ int main(void) {
        printf("%i ", mat[i][j] * -1);
     }
   }
+  printf("\n\nMatriz no formato transposto:");
+  for (int i = 0; i < aux; i++){
+      printf("\n");
+      for (int j = 0; j < aux; j++){
+       printf("%i ", mat[j][i]);
+    }
+  }
 
   return 0;
 }
