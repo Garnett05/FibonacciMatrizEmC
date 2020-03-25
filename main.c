@@ -3,24 +3,24 @@
 
 int main(void) {
 
-  int i, aux;
+  int z, aux;
   aux = 1;
 
   printf("Number of elements: ");
-  scanf("%i", &i);
+  scanf("%i", &z);
 
-  int fibo [i];
+  int fibo [z];
   fibo[0] = 1;
   fibo[1] = 1;
 
   int a = 2;
 
-  while (a < i){
+  while (a < z){
     fibo[a] = fibo[a-1] + fibo[a-2];
     a++;
   }
 
-  while (aux*aux < i){
+  while (aux*aux < z){
     aux++;
   }
 
@@ -29,7 +29,7 @@ int main(void) {
   int n = 0;
   for (int i = 0; i < aux; i++){    
     for (int j = 0; j < aux; j++){
-      if (fibo[n] != 0){
+      if (n < z){
         mat[i][j] = fibo[n];
       }
       else{
@@ -37,24 +37,12 @@ int main(void) {
       }
       n++;
     }
-  }
-     
-  printf("%i \n", aux);
-  printf("%i ", mat[0][0]);
-  printf("%i ", mat[0][1]);
-  printf("%i", mat[0][2]);
-  printf("\n%i ", mat[1][0]);
-  printf("%i ", mat[1][1]);
-  printf("%i ", mat[1][2]);
-  printf("\n%i ", mat[2][0]);
-  printf("%i ", mat[2][1]);
-  printf("%i", mat[2][2]);
-   
-  /*for (int i = 0; i < aux; i++){
+  }   
+  for (int i = 0; i < aux; i++){
       printf("\n");
       for (int j = 0; j < aux; j++){
        printf("%i ", mat[i][j]);
     }
-  }*/
+  }
   return 0;
 }
